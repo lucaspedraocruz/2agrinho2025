@@ -16,13 +16,21 @@ function dragStart(e) {
 }
 
 function dragOver(e) {
-  e.preventDefault(); // necessário para permitir drop
+  e.preventDefault(); // permite soltar o item
 }
 
 function dropItem(e) {
+  e.preventDefault();
+
   const itemId = e.dataTransfer.getData('id');
   const item = document.getElementById(itemId);
   const areaId = e.currentTarget.id;
+
+  if (!item) {
+    resultado.textContent = `❌ Item não encontrado!`;
+    resultado.style.color = 'red';
+    return;
+  }
 
   const certo = item.dataset.local === areaId;
 
@@ -31,7 +39,7 @@ function dropItem(e) {
     resultado.textContent = `✔️ Acertou!`;
     resultado.style.color = 'green';
   } else {
-    resultado.textContent = `❌ Errou! Esse item pertence ao ${item.dataset.local}`;
+    resultado.textContent = `❌ Errou! Esse item pertence ao ${item.dataset.local}.`;
     resultado.style.color = 'red';
   }
 }

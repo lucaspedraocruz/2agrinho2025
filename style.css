@@ -17,16 +17,19 @@ h1 {
 }
 
 .area {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border: 2px dashed #888;
-  margin: 0 30px;
+  margin: 0 20px;
   padding: 10px;
   background-color: #fff;
+  border-radius: 8px;
 }
 
 .area h2 {
   margin-top: 0;
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 .itens {
@@ -37,4 +40,11 @@ h1 {
   width: 60px;
   margin: 10px;
   cursor: grab;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.item:active {
+  cursor: grabbing;
+  transform: scale(1.1);
 }
