@@ -3,33 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Conexão do Campo à Cidade</title>
+  <title>Jogo: Campo x Cidade</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Conexão do Campo à Cidade</h1>
-    <p>Unindo tradições e inovações para um futuro sustentável.</p>
-  </header>
+  <h1>Jogo: Conexão do Campo à Cidade</h1>
+  <p>Arraste os itens para o local correto!</p>
 
-  <main>
-    <section class="card">
-      <h2>Do campo...</h2>
-      <p>O campo produz com esforço e dedicação os alimentos que chegam até nossas mesas.</p>
-    </section>
+  <div class="game">
+    <div class="area" id="campo">
+      <h2>Campo</h2>
+    </div>
 
-    <section class="card">
-      <h2>...à cidade</h2>
-      <p>A cidade consome, transforma e valoriza os produtos da terra.</p>
-    </section>
+    <div class="area" id="cidade">
+      <h2>Cidade</h2>
+    </div>
+  </div>
 
-    <button id="btnMensagem">Clique para ver uma mensagem</button>
-    <p id="mensagem"></p>
-  </main>
+  <div class="itens">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Trator" draggable="true" id="trator" class="item" data-local="campo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3381/3381610.png" alt="Mercado" draggable="true" id="mercado" class="item" data-local="cidade">
+    <img src="https://cdn-icons-png.flaticon.com/512/3075/3075927.png" alt="Vaca" draggable="true" id="vaca" class="item" data-local="campo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3075/3075943.png" alt="Prédio" draggable="true" id="predio" class="item" data-local="cidade">
+  </div>
 
-  <footer>
-    <p>&copy; 2025 - Projeto Educacional</p>
-  </footer>
+  <p id="resultado"></p>
 
   <script src="script.js"></script>
 </body>
