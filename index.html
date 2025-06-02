@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do Campo à Cidade</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conexão do Campo à Cidade</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Do Campo à Cidade</h1>
-        <p>Veja como os alimentos chegam até você!</p>
-    </header>
+  <header>
+    <h1>Conexão do Campo à Cidade</h1>
+    <p>Unindo tradições e inovações para um futuro sustentável.</p>
+  </header>
 
-    <main>
-        <div class="scene">
-            <!-- CENÁRIO DO CAMPO -->
-            <div id="field" class="active">
-                <div class="farmer" onclick="harvest()"></div>
-                <div class="food" id="food"></div>
-            </div>
+  <main>
+    <section class="card">
+      <h2>Do campo...</h2>
+      <p>O campo produz com esforço e dedicação os alimentos que chegam até nossas mesas.</p>
+    </section>
 
-            <!-- CAMINHÃO (transição) -->
-            <div id="truck" onclick="driveToCity()"></div>
+    <section class="card">
+      <h2>...à cidade</h2>
+      <p>A cidade consome, transforma e valoriza os produtos da terra.</p>
+    </section>
 
-            <!-- CENÁRIO DA CIDADE -->
-            <div id="city">
-                <div class="market"></div>
-                <div class="people"></div>
-            </div>
-        </div>
+    <button id="btnMensagem">Clique para ver uma mensagem</button>
+    <p id="mensagem"></p>
+  </main>
 
-        <button id="restart-btn" onclick="restart()">Reiniciar</button>
-    </main>
+  <footer>
+    <p>&copy; 2025 - Projeto Educacional</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
