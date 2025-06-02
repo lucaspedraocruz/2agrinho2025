@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Campo à Cidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Do Campo à Cidade</h1>
+        <p>Veja como os alimentos chegam até você!</p>
+    </header>
+
+    <main>
+        <div class="scene">
+            <!-- CENÁRIO DO CAMPO -->
+            <div id="field" class="active">
+                <div class="farmer" onclick="harvest()"></div>
+                <div class="food" id="food"></div>
+            </div>
+
+            <!-- CAMINHÃO (transição) -->
+            <div id="truck" onclick="driveToCity()"></div>
+
+            <!-- CENÁRIO DA CIDADE -->
+            <div id="city">
+                <div class="market"></div>
+                <div class="people"></div>
+            </div>
+        </div>
+
+        <button id="restart-btn" onclick="restart()">Reiniciar</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
